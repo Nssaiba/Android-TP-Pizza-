@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/liste"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".DetailsProduit">
+
+    <!-- Image de la pizza (Alignée à gauche) -->
+    <ImageView
+        android:id="@+id/imagePlat"
+        android:layout_width="128dp"
+        android:layout_height="133dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/pizza1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Nom de la pizza (Aligné à droite de l'image) -->
+
+    <TextView
+        android:id="@+id/nom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imagePlat" />
+
+    <ImageView
+        android:id="@+id/imagenbrIngredients"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="10dp"
+        android:src="@android:drawable/ic_menu_myplaces"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@id/imagePlat"
+        app:layout_constraintTop_toBottomOf="@id/nom" />
+
+    <!-- Texte de localisation -->
+    <TextView
+        android:id="@+id/nbrIngredients"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#555"
+        android:textSize="16sp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/imagenbrIngredients"
+        app:layout_constraintTop_toTopOf="@id/imagenbrIngredients" />
+
+    <ImageView
+        android:id="@+id/imageDuree"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="10dp"
+        android:src="@android:drawable/ic_lock_idle_alarm"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@id/imagePlat"
+        app:layout_constraintTop_toBottomOf="@id/imagenbrIngredients" />
+
+    <!-- Texte de durée -->
+    <TextView
+        android:id="@+id/duree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#555"
+        android:textSize="16sp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/imageDuree"
+        app:layout_constraintTop_toTopOf="@id/imageDuree" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="32dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="36dp"
+        android:src="@android:drawable/ic_menu_directions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/nom" />
+
+    <TextView
+        android:id="@+id/idf"
+        android:layout_width="18dp"
+        android:layout_height="23dp"
+        android:text=""
+        android:visibility="invisible"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="1dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
